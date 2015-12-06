@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>What are the steps of a 'for' loop?</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        p {
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            color: #468966;
+        }
+        
+        li {
+            font-size: 18px;
+            /*font-family: 'Open Sans', sans-serif;*/
+            font-family: 'Source Code Pro';
+            cursor: pointer;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            font-size: 60px;
+            color: #2884C3;
+        }
+        
+        code {
+            background-color: lightgray;
+            color: #CE234C;
+            margin: auto;
+            font-size: 40px;
+            font-family: 'Source Code Pro';
+        }
+        
+        .snippet {
+            margin: 0 auto;
+            background-color: lightgray;
+            width: 675px;
+        }
+        
+        #wrapper {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+    <h1>What are the steps of a 'for' loop?</h1>
+    <div class="snippet"><code>
+        for(var i = 0; i < 3; i++) {<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<BR>
+        }<BR>
+    </code>
+    </div>
+    <p>Drag each item to put the steps in the correct order:</p>
+        <div id="example-1-1">
+            <ul class='sortable-list'>
+                <li class='sortable-item'><span style="color:red">A.</span> check condition: 0 is less than 3, so begin the code in the loop</li>
+                <li class='sortable-item'><span style="color:red">B.</span> check condition: 1 is less than 3, so begin the code in the loop</li>
+                <li class='sortable-item'><span style="color:red">C.</span> check condition: 2 is less than 3, so begin the code in the loop</li>
+                <li class='sortable-item'><span style="color:red">D.</span> check condition: 3 is NOT less than 3, so <strong>for</strong> loop ends</li>
+                <li class='sortable-item'><span style="color:red">E.</span> declare a variable called <strong>i</strong> and set it equal to 0</li>
+                <li class='sortable-item'><span style="color:red">F.</span> log 0 to the console</li>
+                <li class='sortable-item'><span style="color:red">G.</span> log 1 to the console</li>
+                <li class='sortable-item'><span style="color:red">H.</span> log 2 to the console</li>
+                <li class='sortable-item'><span style="color:red">I.</span> increase <strong>i</strong> from 0 to 1</li>
+                <li class='sortable-item'><span style="color:red">J.</span> increase <strong>i</strong> from 1 to 2</li>
+                <li class='sortable-item'><span style="color:red">K.</span> increase <strong>i</strong> from 2 to 3</li>
+            </ul>
+        </div>
+</div>
+    
+    <!--     <input type='button' id='hideshow' value='hide/show letters'> -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example-1-1 .sortable-list').sortable();
+        });
+    </script>
+
+
+
+</body>
+
+</html>
