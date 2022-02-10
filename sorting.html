@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>Sorting</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <style type="text/css">
+        p {
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            color: #468966;
+        }
+        
+        li {
+            font-size: 18px;
+            font-family: 'Source Code Pro';
+            cursor: pointer;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            font-size: 60px;
+            color: #2884C3;
+        }
+        
+        code {
+            background-color: lightgray;
+            color: #CE234C;
+            margin: auto;
+            font-size: 40px;
+            font-family: 'Source Code Pro';
+        }
+        
+        .snippet {
+            margin: 0 auto;
+            background-color: lightgray;
+            width: 700px;
+        }
+        
+        #wrapper {
+            width: 800px;
+            margin: 0 auto;
+        }
+        
+        button {
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+    </style>
+
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <h1>Sorting</h1>
+        
+        <div>
+            <h3>How many values?</h3>
+            <input id="count"><br>
+            <h3>Max value?</h3>
+            <input id="max"><br>
+            <br>
+            <button id="go">Go</button>
+        </div>
+
+        <p></p>
+
+        
+        <ul class='sortable-list' id='nums'>
+                <!-- to be populated -->
+        </ul>
+        
+        
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#nums').sortable();
+        });
+
+        document.querySelector('#go').addEventListener('click',function(){
+            var nums = document.querySelector('#nums');
+            nums.innerHTML = "";
+            
+            document.querySelector('p').innerHTML = "Drag each item value put them in the correct order:"
+            var count = document.querySelector('#count').value;
+            var max = document.querySelector('#max').value;
+            
+            for(var i = 0; i < count; i++){
+                var newLi = document.createElement('li');
+                newLi.innerHTML = Math.floor(Math.random()*max);
+                newLi.classList.add('sortable-item');
+                nums.appendChild(newLi);
+            }
+        });
+        
+    </script>
+
+</body>
+
+</html>
